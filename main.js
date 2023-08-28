@@ -119,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
             search: true,
             disableSelectAll: true
         });
+
         
 
         // Gắn sự kiện lọc khi giá trị thay     
@@ -147,6 +148,11 @@ document.addEventListener("DOMContentLoaded", function () {
             search: true,
             disableSelectAll: true
         });
+
+        const searchItem = getCookie("NMC_Albion_searchItem");
+        if(searchItem !== ""){
+            myselect.setValue(searchItem.split(","));
+        }
         
 
         // Gắn sự kiện lọc khi giá trị thay     
@@ -182,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function checkCookie() {
-        let searchItem = encodeURIComponent(getCookie("NMC_Albion_searchItem"));
+        let searchItem = getCookie("NMC_Albion_searchItem");
         let apiUrl = "https://east.albion-online-data.com/api/v2/stats/Prices/T4_BAG,T5_BAG,T6_BAG,T7_BAG,T8_BAG.json?qualities=1%2C2%2C3%2C4%2C5"; // Thay thế bằng URL thực tế của API
 
         console.log(searchItem);
