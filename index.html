@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Data Viewer</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="./vanillaSelectBox.css">
+
+</head>
+<body>
+    <h1>API Data Viewer</h1>
+
+    
+
+    <!-- Thêm thuộc tính multiple cho thẻ select của thành phố và item_id -->
+
+
+    <select id="filter-city" multiple size="3">
+        <option value="">Lọc theo thành phố</option>
+    </select>
+
+    <select id="filter-item" multiple size="3">
+        <option value="">Lọc theo item_id</option>
+    </select>
+
+
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Item ID</th>
+                <th>City</th>
+                <th>Quality</th>
+                <th>Sell Price Min</th>
+                <th>Buy Price Max</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <select id="follows" multiple >
+        <option value="">follows</option>
+    </select>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="./vanillaSelectBox.js?v1.0.3"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
