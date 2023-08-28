@@ -1,51 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API Data Viewer</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-    <link rel="stylesheet" href="./vanillaSelectBox.css">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="./vanillaSelectBox.css" />
 </head>
-<body>
-    <h1>API Data Viewer</h1>
 
-    
+<body>
+    <h1 style="align-content: center;">DÒ GIÁ GAME ALBION - MAI LINH ROK</h1>
+
+    <div class="demo-zone">
+        <label><b>Đầu tiên bạn phải chọn tất cả các mặt hàng cần theo dõi ở đây và F5: </b></label>
+        <select id="follows" multiple size="3" style="display: inline-block;">
+            <option value="">follows</option>
+        </select>
+    </div>
+
+    <br></br>
 
     <!-- Thêm thuộc tính multiple cho thẻ select của thành phố và item_id -->
 
+            <label><b>Lọc để xem theo item và thành phố: </b></label>
 
-    <select id="filter-city" multiple size="3">
-        <option value="">Lọc theo thành phố</option>
-    </select>
-
-    <select id="filter-item" multiple size="3">
-        <option value="">Lọc theo item_id</option>
-    </select>
+    <div class="demo-zone">
 
 
 
-    <table id="data-table">
-        <thead>
-            <tr>
-                <th>Item ID</th>
-                <th>City</th>
-                <th>Quality</th>
-                <th>Sell Price Min</th>
-                <th>Buy Price Max</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+        <select id="filter-city" multiple size="3">
+            <option value="">Lọc theo thành phố</option>
+        </select>
 
-    <select id="follows" multiple >
-        <option value="">follows</option>
-    </select>
+        <select id="filter-item" multiple size="3">
+            <option value="">Lọc theo item_id</option>
+        </select>
+    </div>
+
+    <br></br>
+
+
+    <div class="demo-zone">
+
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Tên mặt hàng</th>
+                    <th>Thành phố</th>
+                    <th>Chất lượng</th>
+                    <th>Giá bán thấp nhất</th>
+                    <th>Giá mua cao nhất</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
     <script src="./vanillaSelectBox.js?v1.0.3"></script>
     <script type="module" src="main.js"></script>
 </body>
+
 </html>

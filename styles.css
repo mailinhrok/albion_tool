@@ -24,6 +24,12 @@ table {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.demo-zone {
+    display: block;
+    width: 100%;
+    min-height: 200px;
+}
+
 table, th, td {
     border: 1px solid #ddd;
 }
