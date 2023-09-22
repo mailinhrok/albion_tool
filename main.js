@@ -116,8 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         let myselect = new vanillaSelectBox(`#${selectId}`,{
-            search: true,
-            disableSelectAll: true
+            search: true        
         });
 
         
@@ -145,8 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         let myselect = new vanillaSelectBox(`#${selectId}`,{
-            search: true,
-            disableSelectAll: true
+            search: true
         });
 
         const searchItem = getCookie("NMC_Albion_searchItem");
@@ -189,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function checkCookie() {
         let searchItem = getCookie("NMC_Albion_searchItem");
-        let apiUrl = "https://east.albion-online-data.com/api/v2/stats/Prices/T4_BAG,T5_BAG,T6_BAG,T7_BAG,T8_BAG.json?qualities=1%2C2%2C3%2C4%2C5"; // Thay thế bằng URL thực tế của API
+        let apiUrl = "https://east.albion-online-data.com/api/v2/stats/Prices/T6_ARMOR_PLATE_SET3.json?qualities=1%2C2%2C3%2C4%2C5"; // Thay thế bằng URL thực tế của API
 
         console.log(searchItem);
         if (searchItem !== "") {
